@@ -57,7 +57,7 @@
 		$fh = fopen($secretFile, 'r');
 		$secretKey = fread($fh, filesize($secretFile));
 		fclose($fh);
-		return $secretKey;
+		return trim($secretKey);
 	}
 
 ?>
