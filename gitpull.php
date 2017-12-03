@@ -21,6 +21,8 @@
     base64_encode($signature);
 
     if (strpos($agent,'GitHub-Hookshot') !== false){
+		echo $signature . '\n\n';
+		echo verify_request();
         if (hash_equals($signature, verify_request())){
             // Run the commands
             foreach($commands AS $command){
