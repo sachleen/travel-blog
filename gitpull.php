@@ -46,7 +46,7 @@ function verify_request(){
 
 // Gets the secret key from a file outside public_html. The file should contain nothing but the key on one line only.
 function getSecretKey() {
-	$secretFile = __DIR__ . '/../../.gitpullsecretkey';
+	$secretFile = __DIR__ . '../.gitpullsecretkey';
 	$fh = fopen($secretFile, 'r');
 	$secretKey = fread($fh, filesize($secretFile));
 	fclose($fh);
