@@ -1,3 +1,3 @@
-# travel-blog
+# Travel Blog
 
-Hello world!!
+This repository contains my travel blog.

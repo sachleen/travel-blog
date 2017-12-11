@@ -1,0 +1,54 @@
+* {
+    all: unset;
+}
+
+/* Thanks to L. David Baron for this: https://twitter.com/davidbaron/status/794138427952222210 */
+base, basefont, datalist, head, meta, script, style, title,
+noembed, param, template {
+    display: none;
+}
+
+h2 {
+    font-size: 200%;
+    display: block;
+}
+
+nav ul {
+    margin:0; 
+    padding:0;
+}
+nav ul li {
+    display:inline; 
+    margin:5px;
+}
+
+#posts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    max-width: 1250px;
+    background-color: #eee;
+    margin: 0 auto;
+}
+
+section {
+    flex-basis: 33%;
+    min-width: 300px;
+    flex-grow: 2;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+section:first-child {
+    background-color: #ccc;
+    flex-basis: 66%;
+    flex-grow:2;
+}
+
+section:last-child {
+    background-color: #ccc;
+    flex-basis: 33%;
+    flex-grow:0;
+}
