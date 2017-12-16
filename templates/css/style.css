@@ -1,20 +1,9 @@
-
-
-a {
-    cursor: pointer;
-}
-a:hover {
-    text-decoration: underline;
-}
-
-
+/* Global Styles
+   ========================================================================== */
 body {
     font-color: #1d1d1d;
     font-family: 'Roboto', sans-serif;
 }
-
-/* Global Styles
-   ========================================================================== */
 .wrapper {
     max-width: 1250px;
     margin: 0 auto;
@@ -23,6 +12,7 @@ body {
 
 h1 {
     font-size: 200%;
+    display: block;
 }
 
 h2 {
@@ -38,15 +28,37 @@ header {
     line-height: 50px;
 }
 
-#header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
 header h1 {
     margin: 0;
+}
+
+
+/*
+    Navigation
+    ===================
+*/
+nav ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+nav ul {
+    display: flex;
+}
+.nav_right {
+    margin-left: auto;
+}
+nav ul li {
+    margin-right: 20px;
+}
+nav a {
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+}
+nav a:hover {
+    text-decoration: none;
+    background-color: #000;
 }
 
 /* Medium screens */
@@ -63,30 +75,22 @@ header h1 {
     /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
   }
+  nav a {
+      display: block;
+  }
+  nav input {
+      width: 100%;
+  }
+  nav button {
+      width: 100%;
+  }
+  .nav_right {
+      margin-left: 0;
+  }
 }
 
-nav {
 
-}
 
-nav ul {
-    margin:0 0 0 20px; 
-    padding:0;
-}
-nav ul li {
-    display:inline; 
-    margin:5px;
-}
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    line-height: 50px;
-    display: inline-block;
-    width: 100px;
-}
-nav ul li a:hover {
-    font-weight: bold;
-}
 
 
 footer {
