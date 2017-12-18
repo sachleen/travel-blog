@@ -22,7 +22,7 @@ h2 {
 
 /* Header
    ========================================================================== */
-header {
+header, footer {
     background-color: #1d1d1d;
     color:#fff;
     line-height: 50px;
@@ -30,6 +30,20 @@ header {
 
 header h1 {
     margin: 0;
+    white-space: nowrap;
+}
+
+header a, footer a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+footer {
+    padding: 50px 0;
+}
+footer p {
+    margin: 0;
+    text-align: center;
 }
 
 
@@ -44,6 +58,9 @@ nav ul {
 }
 nav ul {
     display: flex;
+    flex-wrap: wrap;
+    align_items: baseline;
+    margin: 0 20px;
 }
 .nav_right {
     margin-left: auto;
@@ -51,21 +68,25 @@ nav ul {
 nav ul li {
     margin-right: 20px;
 }
-nav a {
-    color: #FFF;
-    text-decoration: none;
+nav ul li a {
     display: block;
+    padding: 0 10px;
+}
+nav li:first-child a {
+    padding-left: 0;
+}
+nav li:last-child a {
+    padding-right: 0;
 }
 nav a:hover {
     text-decoration: none;
-    background-color: #000;
 }
 
 /* Medium screens */
 @media all and (max-width: 800px) {
   nav ul {
     /* When on medium sized screens, we center it by evenly distributing empty space around items */
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 }
 
@@ -74,6 +95,15 @@ nav a:hover {
   nav ul {
     /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
+  }
+  nav ul li {
+    margin-right: 0;
+  }
+  nav li:first-child a {
+    padding-left: 10px;
+  }
+  nav li:last-child a {
+      padding-right: 10px;
   }
   nav a {
       display: block;
@@ -90,15 +120,6 @@ nav a:hover {
 }
 
 
-
-
-
-footer {
-    background-color: #1d1d1d;
-    color:#fff;
-    line-height: 50px;
-    display: block;
-}
 
 
 

@@ -1,8 +1,48 @@
-{% for post in posts|slice(0, 10) %}
-    <h1>{{ post.metadata.title|e }}</h1>
-    {{ post.content|raw }}
-{% else %}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--<script charset="utf-8" src="js/scripts.js"></script>-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <nav>
+                <ul class="twitter" role="navigation">
+                    <li><h1><a href="#1">Sach Travels</a></h1></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="posts/about">About</a></li>
+                    <li><a href="archive.html">Archive</a></li>
+                    <!--<li class="nav_right"><form action="http://google.com"><input placeholder="search"/></form></li>
+                    <li><button>Search</button></li>-->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div id="posts" class="wrapper">
+    {% for post in posts|slice(0, 10) %}
+        <section>
+            <article>
+                <h2><a href="pages/{{ post.metadata.slug }}/">{{ post.metadata.title|e }}</a></h2>
+                {{ post.content|raw }}
+            </article>
+        </section>
+    {% else %}
     No posts.
-{% endfor %}
-
-<a href="archive.html">Archive</a>
+    {% endfor %}
+    </div>
+    
+    <footer>
+        <div class="wrapper">
+            <p>Powered by <a href="https://github.com/sachleen/Steady">Steady</a></p>
+        </div>
+    </footer>
+</body>
+</html>
