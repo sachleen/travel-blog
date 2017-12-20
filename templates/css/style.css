@@ -13,11 +13,22 @@ body {
 h1 {
     font-size: 200%;
     display: block;
+    margin:0;
+    margin-bottom: 20px;
 }
 
 h2 {
     font-size: 200%;
     display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #2891cd;
+}
+
+p {
+    line-height: 150%;
 }
 
 /* Header
@@ -26,6 +37,7 @@ header, footer {
     background-color: #1d1d1d;
     color:#fff;
     line-height: 50px;
+    
 }
 
 header h1 {
@@ -52,15 +64,12 @@ footer p {
     ===================
 */
 nav ul {
-  padding: 0;
-  list-style: none;
-  margin: 0;
-}
-nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0 20px;
     display: flex;
     flex-wrap: wrap;
     align_items: baseline;
-    margin: 0 20px;
 }
 .nav_right {
     margin-left: auto;
@@ -84,46 +93,46 @@ nav a:hover {
 
 /* Medium screens */
 @media all and (max-width: 800px) {
-  nav ul {
-    /* When on medium sized screens, we center it by evenly distributing empty space around items */
-    justify-content: flex-start;
-  }
+    nav ul {
+        /* When on medium sized screens, we center it by evenly distributing empty space around items */
+        justify-content: flex-start;
+    }
 }
 
 /* Small screens */
 @media all and (max-width: 500px) {
-  nav ul {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: column;
-  }
-  nav ul li {
-    margin-right: 0;
-  }
-  nav li:first-child a {
-    padding-left: 10px;
-  }
-  nav li:last-child a {
-      padding-right: 10px;
-  }
-  nav a {
-      display: block;
-  }
-  nav input {
-      width: 100%;
-  }
-  nav button {
-      width: 100%;
-  }
-  .nav_right {
-      margin-left: 0;
-  }
+    nav ul {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+    }
+    nav ul li {
+        margin-right: 0;
+        text-align: center;
+    }
+    nav li:first-child a {
+        padding-left: 10px;
+    }
+    nav li:last-child a {
+        padding-right: 10px;
+    }
+    nav a {
+        display: block;
+    }
+    nav input {
+        width: 100%;
+    }
+    nav button {
+        width: 100%;
+    }
+    .nav_right {
+        margin-left: 0;
+    }
 }
 
-
-
-
-
-
+/*
+    Index page
+    ===================
+*/
 #posts {
     display: flex;
     flex-direction: row;
@@ -132,25 +141,58 @@ nav a:hover {
     align-items: stretch;
 }
 
-section {
+#posts section {
     flex-basis: 33%;
     min-width: 300px;
     flex-grow: 2;
     padding: 10px;
     box-sizing: border-box;
+    display: block;
 }
 
-section:first-child {
-    flex-basis: 66%;
+#posts section:first-child {
+    flex-basis: 100%;
     flex-grow:2;
 }
 
-article {
-    display: block;
-    padding: 10px;
+/*
+    Single Page
+    ===================
+*/
+#singlePost {
+    padding: 20px;
+    box-sizing: border-box;
 }
 
+/*
+    Archive
+    ===================
+*/
+#archive {
+    padding: 20px;
+    box-sizing: border-box;
+}
 
-p {
+#archive ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     line-height: 150%;
+    font-size: 125%;
+}
+
+#archive .date {
+    min-width: 150px;
+    display: inline-block;
+}
+
+@media all and (max-width: 500px) {
+    #archive .date {
+        min-width: 0;
+        display: block;
+    }
+    
+    #archive a {
+        display: block;
+    }
 }

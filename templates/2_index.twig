@@ -1,8 +1,0 @@
-{% for post in posts|slice(0, 10) %}
-    <h1>{{ post.metadata.title|e }}</h1>
-    {{ post.content|raw }}
-{% else %}
-    No posts.
-{% endfor %}
-
-<a href="archive.html">Archive</a>

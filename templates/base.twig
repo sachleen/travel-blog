@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    {% block head %}
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %} - Sach Travels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--<script charset="utf-8" src="{{ BASE_URL }}js/scripts.js"></script>-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ BASE_URL }}css/normalize.css" />
+    <link rel="stylesheet" href="{{ BASE_URL }}css/style.css" />
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <nav>
+                <ul role="navigation">
+                    <li><h1><a href="{{ BASE_URL }}">Sach Travels</a></h1></li>
+                    <li><a href="{{ BASE_URL }}">Home</a></li>
+                    <li><a href="{{ BASE_URL }}/posts/about">About</a></li>
+                    <li><a href="{{ BASE_URL }}/archive.html">Archive</a></li>
+                    <!--<li class="nav_right"><form action="http://google.com"><input placeholder="search"/></form></li>
+                    <li><button>Search</button></li>-->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    {% block content %}{% endblock %}
+    
+    <footer>
+        <div class="wrapper">
+            <p>Powered by <a href="https://github.com/sachleen/Steady">Steady</a></p>
+        </div>
+    </footer>
+</body>
+</html>
