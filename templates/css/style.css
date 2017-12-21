@@ -1,5 +1,9 @@
 /* Global Styles
    ========================================================================== */
+html {
+    position: relative;
+    min-height: 100%;
+}
 body {
     font-color: #1d1d1d;
     font-family: 'Roboto', sans-serif;
@@ -51,14 +55,20 @@ header a, footer a {
 }
 
 footer {
-    padding: 50px 0;
     position: absolute;
     bottom: 0;
+    height: 100px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 footer p {
     margin: 0;
     text-align: center;
+}
+#footerMargin {
+    margin-bottom: 100px;
 }
 
 
