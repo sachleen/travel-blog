@@ -52,6 +52,9 @@ header a, footer a {
 
 footer {
     padding: 50px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 footer p {
     margin: 0;
