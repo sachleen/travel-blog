@@ -5,7 +5,7 @@
     <div id="posts" class="wrapper">
     {% for post in posts|slice(0, 10) %}
         <section>
-            <h2><a href="pages/{{ post.metadata.slug }}/">{{ post.metadata.title|e }}</a></h2>
+            <h1><a href="pages/{{ post.metadata.slug }}/">{{ post.metadata.title|e }}</a></h1>
             {{ post.content|TruncateP(2)|raw }}
         </section>
     {% else %}

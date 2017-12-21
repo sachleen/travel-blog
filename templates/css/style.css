@@ -69,7 +69,6 @@ nav ul {
     margin: 0 20px;
     display: flex;
     flex-wrap: wrap;
-    align_items: baseline;
 }
 .nav_right {
     margin-left: auto;
@@ -145,7 +144,7 @@ nav a:hover {
     flex-basis: 33%;
     min-width: 300px;
     flex-grow: 2;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
     display: block;
 }
